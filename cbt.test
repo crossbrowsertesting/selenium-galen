@@ -1,0 +1,27 @@
+@@ set
+    username     chase%40crossbrowsertesting.com
+    authkey      selenium
+    gridCreds    ${username}:${authkey}
+    gridUrl      http://${gridCreds}@hub.crossbrowsertesting.com:80/wd/hub
+    website      https://app.crossbrowsertesting.com/login
+    cbtCaps      --dc.record_video "true" --dc.record_network "true"
+
+@@ table viewports
+    | viewport  | size     |
+    | Narrow    | 1024x768 |
+    | Wide      | 1366x768 |
+
+@@ table desktopBrowsers
+    | browser   | config             					 |
+    | Firefox   | --dc.browser_api_name "firefox-latest" 	 |
+    | Chrome    | --dc.browser_api_name "chrome-latest"  |
+    | IE11      | --dc.browser_api_name "IE11"           |
+    | Safari    | --dc.browser_api_name "Safari10"       |
+
+
+
+@@ parameterized using viewports
+@@ parameterized using desktopBrowsers
+Login form on ${browser} with ${viewport} viewport
+    selenium grid ${gridUrl} --page ${website} ${config} --dc.name "${browser} - ${viewport} Viewport" ${cbtCaps} --size ${size}
+        check test/loginPage.spec    

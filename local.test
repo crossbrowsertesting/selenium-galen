@@ -1,0 +1,12 @@
+@@ set
+    gridUrl      http://localhost:9515/
+    website      https://app.crossbrowsertesting.com/login\
+
+@@ table desktopBrowsers
+    | browser   | gridArgs                                                                              |
+    | Chrome    | --dc.browserName "chrome"                                                             |
+
+@@ parameterized using desktopBrowsers
+on ${browser} with standard viewport
+    selenium grid ${gridUrl} --page ${website} ${gridArgs} ${standardGridArgs} --size 1024x768
+        check test/loginPage.spec    
