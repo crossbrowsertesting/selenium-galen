@@ -1,6 +1,6 @@
 @@ set
     username     chase%40crossbrowsertesting.com
-    authkey      selenium
+    authkey      notmyauthkey
     gridCreds    ${username}:${authkey}
     gridUrl      http://${gridCreds}@hub.crossbrowsertesting.com:80/wd/hub
     website      https://app.crossbrowsertesting.com/login
