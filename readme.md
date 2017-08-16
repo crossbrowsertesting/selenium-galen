@@ -1,6 +1,6 @@
 # Selenium with Galen and CBT #
 
-Galen is a powerful automated test framework for testing and validating responsive CSS within your website or web-application. Combined with a cloud device lab like CBT, you can quickly and efficiently execute your tests on a wide array of operating systems in browsers. Here, we'll go through quickly getting set up Galen and CBT.
+[Galen](http://galenframework.com/) is a powerful automated test framework for testing and validating responsive CSS within your website or web-application. Combined with a cloud device lab like CBT, you can quickly and efficiently execute your tests on a wide array of operating systems and browsers. Here, we'll go through quickly getting set up Galen and CBT.
 
 ## Installation ##
 
@@ -10,13 +10,13 @@ To use this integration, its easiest to go ahead and clone this repository. You 
 npm install
 ```
 
-This will install some dependencies we need in case you're interested in starting a tunnel to test locally hosted resources. If you don't already have Galen installed globally, you should do so now. I can be installed through NPM using the following command:
+This will install some dependencies you need in case you're interested in starting a tunnel to test locally hosted resources. If you don't already have Galen installed globally, you should do so now. It can be installed through NPM using the following command:
 
 ```
 sudo npm install -g galenframework-cli
 ```
 
-It can also be installed by other means, as described in [Galen's installation documentation](http://galenframework.com/docs/getting-started-install-galen/).
+It can also be installed from other resources, as described in [Galen's installation documentation](http://galenframework.com/docs/getting-started-install-galen/).
 
 Once we have all the necessary dependencies installed, we can start running tests. We just need to change the value of the username and authorization key in our cbt.test file:
 
@@ -31,7 +31,7 @@ Once we have all the necessary dependencies installed, we can start running test
 
 ```
 
-The username supplied would be the email address you signed up for CBT with (keep in mind the '@' character should be replaced with '%40'), and you authorization key can be found from the [Selenium Dashboard](https://app.crossbrowsertesting.com/selenium/run) portion of our site. 
+The username supplied would be the email address you signed up for CBT with (keep in mind the '@' character should be replaced with '%40'), and your authorization key can be found from the [Selenium Dashboard](https://app.crossbrowsertesting.com/selenium/run) portion of our site. 
 
 The example I've supplied simply navigates to CrossBrowserTesting's login page and makes some assertions about the layout of our login form. To start up some tests, run the following command:
 
@@ -39,7 +39,7 @@ The example I've supplied simply navigates to CrossBrowserTesting's login page a
 npm run test
 ```
 
-Navigate over to our app, and you can see the tests being executed live. Within your terminal window, you should see test results being completed, and eventually, a passing suite:
+Navigate over to our app, and you can see the tests being executed live. Within your terminal window, you should see test results being completed, and eventually, a completely passing suite:
 
 ```
 ========================================
@@ -99,7 +99,7 @@ The browsers chosen by default are the latest Chrome, Firefox, IE, and Safari, b
     | Safari    | --dc.browser_api_name "Safari10"           |
 ```
 
-At a minimum, we need a browser_api_name or browserName field, but youc an further specify the specific OS/Device/Browser combo with additional fields:
+At a minimum, we need a browser_api_name or browserName field, but you can further specify the specific OS/Device/Browser combination with additional fields:
 
 ```
 @@ table desktopBrowsers
@@ -118,7 +118,7 @@ The real efficiency from using a cloud service like CBT comes with parallel exec
 npm run test:parallel
 ```
 
-This will spin up 4 tests at a time, executing continuously within that threshold until all of your test cases have completed. To modify the number, edit the package.json file or simply run the following command with the number of parallel slots allowed by your plan:
+This will spin up 4 tests at a time, executing continuously within that threshold until all of your test cases have completed. To modify the number of parallel threads, edit the package.json file or simply run the following command with the number of parallel slots allowed by your plan:
 
 ```
 galen test cbt.test --parallel-tests 10
