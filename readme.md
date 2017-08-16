@@ -1,8 +1,8 @@
-*Selenium with Galen and CBT*
+#Selenium with Galen and CBT#
 
 Galen is a powerful automated test framework for testing and validating responsive CSS within your website or web-application. Combined with a cloud device lab like CBT, you can quickly and efficiently execute your tests on a wide array of operating systems in browsers. Here, we'll go through quickly getting set up Galen and CBT.
 
-**Installation**
+##Installation##
 
 To use this integration, its easiest to go ahead and clone this repository. You can drop your test files in and quickly get them running. Navigate to the cloned directory and run:
 
@@ -81,7 +81,7 @@ Total failed tests: 0
 Total failures: 0
 ```
 
-*Changing Browsers/Viewport*
+##Changing Browsers/Viewport##
 
 The browsers chosen by default are the latest Chrome, Firefox, IE, and Safari, but you can choose whatever you'd like. Do so by modifying the data tables in cbt.test:
 
@@ -110,7 +110,7 @@ At a minimum, we need a browser_api_name or browserName field, but youc an furth
 
 Feel free to fill this table with whatever values you'd like! Find our API names from the configuration manager on the [Selenium Dashboard](https://app.crossbrowsertesting.com/selenium/run) of our app. 
 
-*Parallel Execution*
+#Parallel Execution#
 
 The real efficiency from using a cloud service like CBT comes with parallel execution. Try running these scripts in parallel with the following command:
 
@@ -126,6 +126,6 @@ galen test cbt.test --parallel-tests 10
 
 Now you're executing test suites with 10 times the speed you'd have had previously. 
 
-*Support*
+##Support##
 
 Galen has some great documentation out there. Everything from their API reference docs, to test suite setup documentation can be found on their site. Additionally, if you have any further questions about running tests on CBT, don't hesitate to [reach out to us](mailto:support@crossbrowsertesting.com). We're always happy to help.
