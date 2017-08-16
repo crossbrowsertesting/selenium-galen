@@ -1,6 +1,6 @@
 @@ set
     username     chase%40crossbrowsertesting.com
-    authkey      notmyauthkey
+    authkey      yourauthkey
     gridCreds    ${username}:${authkey}
     gridUrl      http://${gridCreds}@hub.crossbrowsertesting.com:80/wd/hub
     website      https://app.crossbrowsertesting.com/login
@@ -12,11 +12,11 @@
     | Wide      | 1366x768 |
 
 @@ table desktopBrowsers
-    | browser   | config             					 |
+    | browser   | config             					     |
     | Firefox   | --dc.browser_api_name "firefox-latest" 	 |
-    | Chrome    | --dc.browser_api_name "chrome-latest"  |
-    | IE11      | --dc.browser_api_name "IE11"           |
-    | Safari    | --dc.browser_api_name "Safari10"       |
+    | Chrome    | --dc.browser_api_name "chrome-latest"      |
+    | IE11      | --dc.browser_api_name "IE11"               |
+    | Safari    | --dc.browser_api_name "Safari10"           |
 
 
 
