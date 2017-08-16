@@ -1,4 +1,4 @@
-#Selenium with Galen and CBT
+# Selenium with Galen and CBT #
 
 Galen is a powerful automated test framework for testing and validating responsive CSS within your website or web-application. Combined with a cloud device lab like CBT, you can quickly and efficiently execute your tests on a wide array of operating systems in browsers. Here, we'll go through quickly getting set up Galen and CBT.
 
