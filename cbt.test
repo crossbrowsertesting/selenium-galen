@@ -4,7 +4,7 @@
     gridCreds    ${username}:${authkey}
     gridUrl      http://${gridCreds}@hub.crossbrowsertesting.com:80/wd/hub
     website      https://app.crossbrowsertesting.com/login
-    cbtCaps      --dc.record_video "true" --dc.record_network "true"
+    cbtCaps      --dc.record_video "true" --dc.record_network "false"
 
 @@ table viewports
     | viewport  | size     |
@@ -24,4 +24,4 @@
 @@ parameterized using desktopBrowsers
 Login form on ${browser} with ${viewport} viewport
     selenium grid ${gridUrl} --page ${website} ${config} --dc.name "${browser} - ${viewport} Viewport" ${cbtCaps} --size ${size}
-        check test/loginPage.spec    
+        check test/loginPage.spec
